@@ -68,6 +68,7 @@ If you want to work on this project, you will need:
 The minimal requirements are brew and make. 
 
 Installing brew 
+
 ```shell script
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -75,9 +76,11 @@ Installing brew
 ### Installing the tooling ⚙️
 
 CLONE THE REPO  
+   
    ```sh
-   git clone https://github.com/erasmolpa/serverless-workshop
+   git clone https://github.com/erasmodominguezdc/cloudnative-serverless-workshops
    ```
+   
 CHECKING THE COMMANDS  
 
    ```sh
@@ -89,6 +92,7 @@ HACK YOUR ENVIRONMENT
  ```sh
      make hacking
    ```
+
 ### Deploying a Kubernetes Cluster 
 
 Ok!!! if you have Docker desktop and a Kubernetes Cluster locally, you can skip this point.If not, please still reading :D 
@@ -128,38 +132,9 @@ You can run the following make command to deploy locally:
      make install-monitoring
    ```
 
-### Knative-DEMO
-
- **Start demo**
-  ```sh
-     make i-knative 
-   ```
-
-![knative-demo](./media/knative-demo.png)
-
-  **Stop demo**
-  ```sh
-     make local-demo-stop 
-   ```
-  
-**Endpoints**
-
- [GO API Endpoint](http://localhost:8080/api/v3/)
-
- [Prometheus](http://localhost:9090)
-
- [Grafana](http://localhost:3000) (user:admin, pass:foobar)
- 
-
-![kube_service](./media/kube_service.png)
-
-And then navigate to the endpoint
-
-![kube_service](./media/kubedemo.png)
-
 ## Testing ⚙️
 
-About project Tests. Are a bit poor. I cannot dedicate all the time I would like to create Mock and integration Testing.
+
 
 ## References 
 
@@ -174,22 +149,22 @@ About project Tests. Are a bit poor. I cannot dedicate all the time I would like
 
 ❌ install_requirements.sh script. Add installation for Linux and Windows distros. 
 
-🚧 Makefile which must provide a automate way to install and configure environments, as well as run the different DEMOS.
+🚧  Makefile which must provide a automate way to install and configure environments, as well as run the different DEMOS.
 
-✅ Observability based on prometheus, Grafana etc for the different workshops.
+✅  Observability based on prometheus, Grafana etc for the different workshops.
 
-🚧 Create configuration to deploy with serverless framework
+🚧  Create configuration to deploy with serverless framework
 
 ### Knative
 
 ❌  Service Mesh Configuration. Using Kourier but add the Istio option.
 ❌  Eventing Configuration. Using Kourier but add the Kafka option.
-🚧 Customize the service.yaml file. Setting params line concurrency etc.
+🚧  Customize the service.yaml file. Setting params line concurrency etc.
 
 ### Kubeless 
 
 ### Nice to have 
-❌ OpenTelemetry configuration for the services. Pending to define the scope
+❌  OpenTelemetry configuration for the services. Pending to define the scope
 
 
 See the [open issues](https://github.com/erasmolpa/serverless-workshop/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) for a list of proposed features (and known issues).
