@@ -138,9 +138,10 @@ You can run the following make command to deploy locally:
 
 ## References 
 
-* serverless framework
+### serverless General info
+https://redhatspain.com/serverless/ 
     [reference](https://www.serverless.com/framework/docs/providers/knative/)
-* examples with knative eventing
+
 
 
 ## Roadmap and Improvements 🚀
