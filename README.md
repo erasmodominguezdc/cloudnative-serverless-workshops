@@ -157,14 +157,19 @@ You can run the following make command to deploy locally:
 
 ### Knative
 
+
 ❌  Service Mesh Configuration. Using Kourier but add the Istio option.
+
 ❌  Eventing Configuration. Using Kourier but add the Kafka option.
+
 🚧  Customize the service.yaml file. Setting params line concurrency etc.
 
 ### Kubeless 
 
 ### Nice to have 
+
 ❌  OpenTelemetry configuration for the services. Pending to define the scope
+
 
 
 See the [open issues](https://github.com/erasmolpa/serverless-workshop/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) for a list of proposed features (and known issues).
