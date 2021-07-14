@@ -186,6 +186,4 @@ This project use [Semantic Versioning](https://semver.org/lang/es/)
 
 # Contact ✒️
 
-Please contact me in the email **erasmolpa@gmail.com** 
-                                       AND/OR 
-                               **cristianqs31@gmail.com** if you have any cuestion
+Please contact me in the email **erasmolpa@gmail.com** if you have any cuestion
