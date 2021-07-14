@@ -1,0 +1,61 @@
+# this config file contains all config fields with comments
+## Please see the official documentation https://kind.sigs.k8s.io/docs/user/configuration/
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+# patch the generated kubeadm config with some extra settings
+networking:
+  ipFamily: dual
+  apiServerAddress: 127.0.0.1
+kubeadmConfigPatches:
+- |
+  apiVersion: kubelet.config.k8s.io/v1beta1
+  kind: KubeletConfiguration
+  evictionHard:
+    nodefs.available: "0%"
+- |
+  kind: InitConfiguration
+  nodeRegistration:
+    kubeletExtraArgs:
+      node-labels: "ingress-ready=true"
+# patch it further using a JSON 6902 patch
+kubeadmConfigPatchesJSON6902:
+- group: kubeadm.k8s.io
+  version: v1beta2
+  kind: ClusterConfiguration
+  patch: |
+    - op: add
+      path: /apiServer/certSANs/-
+      value: my-hostname
+# 1 control plane node and 3 workers
+nodes:
+# the control plane node config
+- role: control-plane
+#  extraPortMappings:
+#  - containerPort: 80
+#    hostPort: 80
+#    protocol: TCP
+#    listenAddress: "127.0.0.1"
+#  - containerPort: 443
+#    hostPort: 443
+#    protocol: TCP
+#    listenAddress: "127.0.0.1"
+#  - containerPort: 31080
+#    hostPort: 80
+#    listenAddress: "127.0.0.1"
+#  - containerPort: 31443
+#    hostPort: 443
+#    listenAddress: "127.0.0.1"
+###########################################
+#            the workers
+###########################################
+- role: worker
+#  extraPortMappings:
+#    - containerPort: 30000
+#      hostPort: 27017
+#      protocol: TCP
+#    - containerPort: 30001
+#      hostPort: 80
+#      protocol: TCP
+#      - containerPort: 30002
+#        hostPort: 443
+#        protocol: TCP
