@@ -30,3 +30,6 @@ kubectl get pods --namespace knative-serving
 
 echo 'Check kourier ports'
 kubectl --namespace kourier-system get service kourier
+
+# Optional: Setup Magic DNS (xip.io)
+kubectl apply -f "https://github.com/knative/serving/releases/download/v${KNATIVE_SERVING_VERSION}/serving-default-domain.yaml"

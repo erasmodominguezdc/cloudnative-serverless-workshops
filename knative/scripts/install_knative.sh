@@ -2,14 +2,15 @@
 
 set -v
 
-export KNATIVE_SERVING_VERSION="0.23.1"
-
-export KNATIVE_EVENTING_VERSION="0.23.2"
+export KNATIVE_SERVING_VERSION="0.24.0"
+export KNATIVE_EVENTING_VERSION="0.24.0"
 
 
 echo 'there are more installation topics. Please , take a look to the following site https://knative.dev/docs/install/install-extensions/ '
 
 # SEE https://knative.dev/docs/install/install-extensions/
+
+kubectl create namespace knative-serving
 
 
 #SEE https://knative.dev/docs/install/knative-with-operators/
@@ -22,22 +23,11 @@ kubectl apply -f "https://github.com/knative/serving/releases/download/v${KNATIV
 # Install Serving Core Components
 kubectl apply -f "https://github.com/knative/serving/releases/download/v${KNATIVE_SERVING_VERSION}/serving-core.yaml"
 
-# Install Istio
-#kubectl apply -f "https://github.com/knative/net-istio/releases/download/v${KNATIVE_SERVING_VERSION}/istio.yaml"
-
-# Install Knative Istio Controller
-#kubectl apply -f "https://github.com/knative/net-istio/releases/download/v${KNATIVE_SERVING_VERSION}/net-istio.yaml"
-
-# Check pods have STATUS 'Running'
-#kubectl get pods -n istio-system
-
-# Optional: Setup Magic DNS (xip.io)
-kubectl apply -f "https://github.com/knative/serving/releases/download/v${KNATIVE_SERVING_VERSION}/serving-default-domain.yaml"
-
-
 
 # Check pods have STATUS 'Running'
 kubectl get pods -n knative-serving
+
+kubectl create namespace knative-eventing
 
 # Install Eventing CRDs
 kubectl apply -f "https://github.com/knative/eventing/releases/download/v${KNATIVE_EVENTING_VERSION}/eventing-crds.yaml"

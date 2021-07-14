@@ -4,76 +4,34 @@ Hi there!! 👋
 
 This repo is a Cloud Native Serverless Workshop repository 
 
-# NATIVE SERVERLESS WORKSHOPS SERIES
+## INSTALLATION
 
-## Workshop-1 INTRO KNATIVE SERVING
-   * Intro explaining the Project  
-      * Makefile 
-      * Tooling , environment
-   * Intro serverless.
-          * About serverless. Definition
-          * Cloud native Serverless solutions (For now Kubeless and Knative)
-   * Intro explaining the repo  
-   * Intro Knative architecture driven by demo (Knative helloworld serving)
+### Prerequisites  📋
 
-## Workshop-2 OBSERVABILITY PART I
-   * What is observability in short words 
-   * Serverless observability patterns and stacks 
-   * Intro Knative Observability Architecture
-   * Demo Knative Observability
-   
-## Workshop-3 DEPLOYMENT STRATEGIES PAR I
-   * Serverless Deployment Patterns 
-   * Knative deployments 
-     * Playing with versions
-     * Blue-Green Deployment
-     * Canary Deployment
-     
-## Workshop-4 KNATIVE EVENTING PAR I
-   * Serverless Deployment Patterns 
-   * Knative deployments 
-     * Playing with versions
-     * Blue-Green Deployment
-     * Canary Deployment 
-# NATIVE SERVERLESS CHAT SERIES
-  * Deep Dive into Serverless Concepts
-    * History
-    * All serverless implementations are ?
-     
-  * Mapping Architecture. Serverless into Kubernetes How Do they Do ? 
+We recomend to install the following tooling: 
 
-## This project was built  🛠️
+* [Brew]
 
 * [Makefile]
+
 * [Docker and Docker-Compose]
-* [Kind]
+
+* [Kubernetes]
+
 * [Kubectl]
+
 * [Helm]
+
 * [Lens]
 
-## Prerequisites  📋
 
-If you want to work on this project, you will need:
-
-* HomeBrew
-* Go
-* Make  
-* Bash
-* Docker Desktop 
-* Helm 
-* Kubectl
-
-**Note:** 
-
-The minimal requirements are brew and make. 
-
-Installing brew 
+**Installing Brew if needed** 
 
 ```shell script
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Installing the tooling ⚙️
+### Installing the tooling  🛠️
 
 CLONE THE REPO  
    
@@ -93,11 +51,15 @@ HACK YOUR ENVIRONMENT
      make hacking
    ```
 
-### Deploying a Kubernetes Cluster 
+**Note:** For now the installation scripts are only for mac os. We are working on providing installers for other distributions
+
+
+### Deploying a Kubernetes Cluster ⚙️
 
 Ok!!! if you have Docker desktop and a Kubernetes Cluster locally, you can skip this point.If not, please still reading :D 
 
 There are many way to deploy a Kubernetes cluster locally. We are using two of then:
+ 
  1. Docker Desktop Kubernetes capabilities. [Enable Kubenetes](https://docs.docker.com/desktop/kubernetes/) 
  2. [Kind](https://kind.sigs.k8s.io)
  
@@ -109,46 +71,17 @@ There are many way to deploy a Kubernetes cluster locally. We are using two of t
  
 ## WORKSHOPS 
 
-### Build 🔧
+Please, take a look tho the
 
+[WORKSHOPS](workshops/README.md)
 
-### Run 🚀
+## REFERENCES 
 
-### Knative
- 
-You can run the following make command to deploy locally:
-
-**helm install**
-  ```sh
-     make h-install 
-   ```
-
-
-### Monitoring
-   After **you install helm** in your computer, you need run the following make command to install the monitoring stack:
-
-  **Install prometheus stack**
-  ```sh
-     make install-monitoring
-   ```
-
-## Testing ⚙️
-
-
-
-## References 
-
-### serverless General info
-https://redhatspain.com/serverless/ 
-    [reference](https://www.serverless.com/framework/docs/providers/knative/)
-
-
-
-## Roadmap and Improvements 🚀
+## ROADMAP & IMPROVEMENTS  🚀
 
 ### Commons
 
-❌ install_requirements.sh script. Add installation for Linux and Windows distros. 
+❌ install_requirements.sh script. Add installation for Linux and Windows distro. 
 
 🚧  Makefile which must provide a automate way to install and configure environments, as well as run the different DEMOS.
 
@@ -172,11 +105,12 @@ https://redhatspain.com/serverless/
 ❌  OpenTelemetry configuration for the services. Pending to define the scope
 
 
+### Issues 
 
 See the [open issues](https://github.com/erasmolpa/serverless-workshop/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) for a list of proposed features (and known issues).
 
 
-## Contributing 🖇️
+## CONTRIBUTING 🖇️
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -186,10 +120,10 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Versioning 📌
+## VERSIONING 📌
 
 This project use [Semantic Versioning](https://semver.org/lang/es/)
 
-# Contact ✒️
+## CONTACT ✒️
 
-Please contact me in the email **erasmolpa@gmail.com** if you have any cuestion
+Please contact me in the email **erasmolpa@gmail.com** if you have any question
