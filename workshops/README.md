@@ -85,11 +85,13 @@ The idea is just install all the components in a local cluster and check what´s
      * Canary Deployment
      
 ## Workshop-4 KNATIVE EVENTING PAR I
-   * Serverless Deployment Patterns 
-   * Knative deployments 
-     * Playing with versions
-     * Blue-Green Deployment
-     * Canary Deployment 
+   * Serverless Patterns 
+   * Knative  
+     * Installing components
+     * Brokers
+     * Flows 
+     * Channels
+     * Observability
      
 # NATIVE SERVERLESS CHAT SERIES
   * Deep Dive into Serverless Concepts
