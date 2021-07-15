@@ -25,13 +25,13 @@ We recomend to install the following tooling:
 * [Lens]
 
 
-**Installing Brew if needed** 
+**Install Brew if needed** 
 
 ```shell script
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Installing the tooling  🛠️
+### Install the tooling  🛠️
 
 CLONE THE REPO  
    
