@@ -12,14 +12,26 @@ The idea is just install all the components in a local cluster and check what´s
 
 ## Agenda 
 
-   * Intro explaining the Project  
-      * Makefile 
-      * Tooling , environment
-   * Intro serverless.
-          * About serverless. Definition
-          * Cloud native Serverless solutions (For now Kubeless and Knative)
-   * Intro explaining the repo  
-   * Intro Knative architecture driven by demo (Knative helloworld serving)
+  1. About the Cloud native Serverless workshop series
+  
+      * Goals
+      
+      * Quick review about resources, repository
+      
+  2. Serverless
+  
+      * What is serverless in a nutshell?
+      
+      * Serverless In Cloud native environments (Kubernetes)
+      
+  3. Knative
+   
+      * Introduction
+      
+      * Review Serving Architecture and components
+      
+      * Workshop Serving example.
+
 
 ## Slides 
 
@@ -47,10 +59,16 @@ The idea is just install all the components in a local cluster and check what´s
      make knative-install
 ```
 
-4. Serve the helloworld application 
+4. Build the helloworld application 
 
 ```sh
-     make knative-workshop-1
+     knative-workshop-build
+```
+
+5. Serve the helloworld application 
+
+```sh
+     knative-workshop-serve
 ```
 
 ## Workshop-2 OBSERVABILITY PART I
