@@ -11,7 +11,7 @@ help:
 
 .PHONY: hacking
 hacking: ## install tooling required, Kind , Kubectl , make ..
-	cd ./common_scripts/hacking && ./install_requirements.sh && ./common_scripts/install_serverless_framework.sh
+	cd ./common_scripts/hacking && ./install_requirements.sh && ./install_serverless_framework.sh
 
 .PHONY: create-cluster
 create-cluster: ## Create Kind Cluster
