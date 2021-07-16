@@ -1,6 +1,7 @@
 # ABOUT
 
 Cloud Native Serverless Workshop Series repository 
+ All the slides are in the following [google drive](https://drive.google.com/drive/folders/1GK1c4y-CP33jKNrDlp71awIScwNvmobj?usp=sharing)
   
 # WORKSHOP-1- INTRO KNATIVE SERVING
 
