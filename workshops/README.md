@@ -15,7 +15,7 @@ The idea is just install all the components in a local cluster and check what´s
 
   1. About the Cloud native Serverless workshop series
   
-      * Goals
+        * Goals
       
       * Quick review about resources, repository
       
