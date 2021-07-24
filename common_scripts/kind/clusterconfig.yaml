@@ -26,15 +26,14 @@ kubeadmConfigPatchesJSON6902:
     - op: add
       path: /apiServer/certSANs/-
       value: my-hostname
-# 1 control plane node and 3 workers
 nodes:
 # the control plane node config
+# In this setup we're going to use port 32000. Later we will configure the Istio ingress gateway to accept connections on this port.
 - role: control-plane
-#  extraPortMappings:
-#  - containerPort: 80
-#    hostPort: 80
-#    protocol: TCP
-#    listenAddress: "127.0.0.1"
+  extraPortMappings:
+  - containerPort: 3200
+    hostPort: 80
+    listenAddress: "127.0.0.1"
 #  - containerPort: 443
 #    hostPort: 443
 #    protocol: TCP
@@ -48,7 +47,7 @@ nodes:
 ###########################################
 #            the workers
 ###########################################
-- role: worker
+#- role: worker
 #  extraPortMappings:
 #    - containerPort: 30000
 #      hostPort: 27017
