@@ -23,7 +23,7 @@ delete-cluster: ## Delete Kind Cluster
 
 .PHONY: knative-install
 knative-install: ## Install all the knative components in the cluster
-	cd ./knative/scripts/ && ./install_knative.sh  && ./install_knative_kourier.sh
+	cd ./knative/scripts/ && ./install_knative.sh
 
 .PHONY: knative-uninstall
 knative-uninstall:  ## UnInstall all the knative components in the cluster
@@ -32,6 +32,12 @@ knative-uninstall:  ## UnInstall all the knative components in the cluster
 .PHONY: knative-show
 knative-show:  ## Knative configuration and resources
 	kubectl get routes && kubectl get ksvc && kubectl get configurations && kubectl -n knative-serving  get cm config-autoscaler -o yaml
+
+.PHONY: istio-install
+istio-install: ## Install the istio component in the cluster
+	cd ./knative/scripts/ && ./install_istioctl.sh
+
+
 .PHONY: kubeless-install
 kubeless-install: ## Install all the kubeless components in the cluster
 	cd ./kubeless/scripts/ && ./install_kubeless.sh
@@ -48,10 +54,14 @@ monitoring-install: ## Install monitoring Operator Stacks (Prometheus, Grafana)
 monitoring-uninstall: ## Install monitoring Operator Stacks (Prometheus, Grafana)
 	cd ./common_scripts/kube-prometheus-stack && ./uninstall_prometheus_operator.sh
 
-.PHONY: knative-workshop-build
-knative-workshop-build: ## Build Knative Helloworld-go servicing By Default . This command accept a param KNATIVE_SERVING_EXAMPLE --> Example make workshop-build KNATIVE_SERVING_EXAMPLE=github-java-client
+.PHONY: knative-serving-workshop-build
+knative-serving-workshop-build: ## Build Knative Helloworld-go servicing By Default . This command accept a param KNATIVE_SERVING_EXAMPLE --> Example make workshop-build KNATIVE_SERVING_EXAMPLE=github-java-client
 	cd ./workshops/knative-serving/$(KNATIVE_SERVING_EXAMPLE)/ && ./build.sh
 
-.PHONY: knative-workshop-serve
-knative-workshop-serve: ## Run Knative Helloworld-go servicing By Default . This command accept a param KNATIVE_SERVING_EXAMPLE --> Example make workshop-serve KNATIVE_SERVING_EXAMPLE=github-java-client
+.PHONY: knative-serving-workshop-serve
+knative-serving-workshop-serve: ## Run Knative Helloworld-go servicing By Default . This command accept a param KNATIVE_SERVING_EXAMPLE --> Example make workshop-serve KNATIVE_SERVING_EXAMPLE=github-java-client
 	cd ./workshops/knative-serving/$(KNATIVE_SERVING_EXAMPLE)/ && ./run.sh
+
+.PHONY: knative-bluegreen-workshop
+knative-bluegreen-workshop: ## Run Knative bluegreen
+	cd ./workshops/knative-traffic-management/blue-green/ && ./run.sh

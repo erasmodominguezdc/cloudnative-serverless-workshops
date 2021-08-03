@@ -2,6 +2,7 @@
 set -v
 #SEE https://www.arthurkoziel.com/running-knative-with-istio-in-kind/
 #SEE https://istio.io/latest/docs/setup/install/istioctl/
+#SEE https://knative.dev/docs/admin/install/installing-istio/
 
 ENABLE_KNATIVE_SERVING_INTEGRATION=${1-true}
 echo 'installing istio.....'
