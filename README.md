@@ -124,6 +124,3 @@ Contributions are what make the open source community such an amazing place to b
 
 This project use [Semantic Versioning](https://semver.org/lang/es/)
 
-## CONTACT ✒️
-
-Please contact me in the email **erasmolpa@gmail.com** if you have any question
