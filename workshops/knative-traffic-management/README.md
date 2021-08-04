@@ -33,3 +33,6 @@
 ```sh
      make knative-bg-demo
 ```
+
+6 Access and configure local DNS resolution
+https://knative.dev/docs/serving/using-a-custom-domain/

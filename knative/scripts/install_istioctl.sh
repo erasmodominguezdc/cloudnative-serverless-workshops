@@ -27,5 +27,6 @@ kubectl patch configmap/config-domain \
   --type merge \
   --patch '{"data":{"127.0.0.1.nip.io":""}}'
 echo 'We enable Istio sidecar injection for the knative-serving namespace and deploy the Knative service in it:'
+
 kubectl label namespace knative-serving istio-injection=enabled
 fi

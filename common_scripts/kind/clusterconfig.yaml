@@ -31,9 +31,18 @@ nodes:
 # In this setup we're going to use port 32000. Later we will configure the Istio ingress gateway to accept connections on this port.
 - role: control-plane
   extraPortMappings:
-  - containerPort: 3200
-    hostPort: 80
-    listenAddress: "127.0.0.1"
+    - containerPort: 30000
+      hostPort: 80
+      listenAddress: "127.0.0.1"
+      protocol: TCP
+    - containerPort: 30001
+      hostPort: 443
+      listenAddress: "127.0.0.1"
+      protocol: TCP
+    - containerPort: 30002
+      hostPort: 15021
+      listenAddress: "127.0.0.1"
+      protocol: TCP
 #  - containerPort: 443
 #    hostPort: 443
 #    protocol: TCP
