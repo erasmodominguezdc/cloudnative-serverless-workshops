@@ -35,3 +35,6 @@ kubectl apply -f ./blue-green-demo-route.yaml
 # Obtain URL of the blue green deployment
 echo -e "\\n${YELLOW}URL blue green deployment${NC}"
 kubectl get route blue-green-demo
+
+
+#kn  revision list --namespace knative-serving

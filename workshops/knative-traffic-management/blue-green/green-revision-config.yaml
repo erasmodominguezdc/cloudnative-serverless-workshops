@@ -2,7 +2,7 @@ apiVersion: serving.knative.dev/v1
 kind: Configuration
 metadata:
   name: blue-green-demo # Configuration name is unchanged, since we're updating an existing Configuration
-  namespace: default
+  namespace: knative-serving
 spec:
   template:
     spec:
