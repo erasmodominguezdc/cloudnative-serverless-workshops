@@ -32,5 +32,6 @@
 
 ```sh
      make knative-bluegreen-workshop
-     kn revision list -n knative-serving
+     kn revision list -s blue-green-canary
+     kn service update -n knativetutorial blue-green-canary --tag=blue-green-canary-xjygh-1=blue
 ```

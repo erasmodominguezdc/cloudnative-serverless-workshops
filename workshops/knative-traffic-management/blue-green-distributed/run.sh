@@ -29,7 +29,7 @@ echo -e "\\n"
 ## ROUTE ##
 echo -e "${YELLOW}Route traffic 50/50${NC}"
 
-# Create blue-green Route . Modify revision name for the previous deployment name
+# Create blue-green-distributed Route . Modify revision name for the previous deployment name
 kubectl apply -f ./blue-green-demo-route.yaml
 
 # Obtain URL of the blue green deployment

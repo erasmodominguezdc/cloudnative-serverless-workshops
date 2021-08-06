@@ -64,4 +64,4 @@ knative-serving-workshop-serve: ## Run Knative Helloworld-go servicing By Defaul
 
 .PHONY: knative-bluegreen-workshop
 knative-bluegreen-workshop: ## Run Knative bluegreen
-	cd ./workshops/knative-traffic-management/blue-green/ && ./run.sh
+	cd ./workshops/knative-traffic-management/blue-green-distributed/ && ./run.sh
