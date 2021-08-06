@@ -28,11 +28,8 @@
      make monitoring-install
 ```
 
-5. Serve the helloworld application 
+5. Serve the blue green demo 
 
 ```sh
-     make knative-bg-demo
+     make knative-bluegreen-workshop
 ```
-
-6 Access and configure local DNS resolution
-https://knative.dev/docs/serving/using-a-custom-domain/
