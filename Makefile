@@ -62,6 +62,10 @@ knative-serving-workshop-build: ## Build Knative Helloworld-go servicing By Defa
 knative-serving-workshop-serve: ## Run Knative Helloworld-go servicing By Default . This command accept a param KNATIVE_SERVING_EXAMPLE --> Example make workshop-serve KNATIVE_SERVING_EXAMPLE=github-java-client
 	cd ./workshops/knative-serving/$(KNATIVE_SERVING_EXAMPLE)/ && ./run.sh
 
-.PHONY: knative-bluegreen-workshop
-knative-bluegreen-workshop: ## Run Knative bluegreen
-	cd ./workshops/knative-traffic-management/blue-green-distributed/ && ./run.sh
+.PHONY: knative-bluegreen
+knative-bluegreen: ## Run Knative bluegreen
+	cd ./workshops/knative-traffic-management/blue-green-default/ && ./run.sh
+
+.PHONY: knative-canary
+knative-canary: ## Run Knative bluegreen
+	cd ./workshops/knative-traffic-management/canary/ && ./run.sh

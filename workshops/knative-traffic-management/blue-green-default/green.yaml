@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - image: quay.io/rhdevelopers/blue-green-distributed-canary
+        - image: quay.io/rhdevelopers/blue-green-canary
           env:
             - name: BLUE_GREEN_CANARY_COLOR
               value: "#5bbf45"
