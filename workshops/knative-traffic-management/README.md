@@ -32,4 +32,5 @@
 
 ```sh
      make knative-bluegreen-workshop
+     kn revision list -n knative-serving
 ```
