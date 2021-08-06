@@ -69,3 +69,7 @@ knative-canary: ## Run Knative bluegreen
 .PHONY: knative-bluegreen
 knative-bluegreen: ## Run Knative bluegreen
 	cd ./workshops/knative-traffic-management/blue-green/ && ./run.sh
+
+.PHONY: knative-bluegreen-101
+knative-bluegreen-101: ## Run Knative bluegreen-101
+	cd ./workshops/knative-traffic-management/blue-green-100/ && ./run.sh

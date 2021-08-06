@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: blue-green-distributed-canary
+  name: blue-green-canary
   namespace: default
 spec:
   template:
