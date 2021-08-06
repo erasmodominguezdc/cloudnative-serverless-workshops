@@ -6,7 +6,7 @@ metadata:
 spec:
   traffic:
     - revisionName: blue-green-demo-00001
-      percent: 80 # All traffic goes to this revision
+      percent: 100 # All traffic goes to this revision
     - revisionName: blue-green-demo-00002
-      percent: 20 # 0% of traffic routed to the second revision
+      percent: 0 # 0% of traffic routed to the second revision
       tag: v2 # A named route
