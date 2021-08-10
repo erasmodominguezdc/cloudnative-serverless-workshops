@@ -31,12 +31,26 @@ We recomend to install the following tooling:
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+**Install Git if needed** 
+
+```shell script
+   brew install git
+```
+
+**Install Make if needed** 
+
+```shell script
+   brew install make make
+```
+
 ### Install the tooling  🛠️
 
 CLONE THE REPO  
    
    ```sh
-   git clone https://github.com/erasmodominguezdc/cloudnative-serverless-workshops
+    git clone https://github.com/erasmodominguezdc/cloudnative-serverless-workshops
+    cd cloudnative-serverless-workshops
+    make haking
    ```
    
 CHECKING THE COMMANDS  
