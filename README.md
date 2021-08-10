@@ -40,7 +40,7 @@ We recomend to install the following tooling:
 **Install Make if needed** 
 
 ```shell script
-   brew install make make
+   brew install make
 ```
 
 ### Install the tooling  🛠️
