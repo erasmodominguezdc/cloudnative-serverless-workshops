@@ -73,3 +73,7 @@ knative-bluegreen: ## Run Knative bluegreen
 .PHONY: knative-bluegreen-101
 knative-bluegreen-101: ## Run Knative bluegreen-101
 	cd ./workshops/knative-traffic-management/blue-green-100/ && ./run.sh
+
+.PHONY: kubeless-java-helloworld
+kubeless-java-helloworld: ## Run java kubeless example
+	cd ./workshops/kubeless-java-sample/ && ./run.sh
